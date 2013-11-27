@@ -1,0 +1,42 @@
+* {
+  -webkit-user-select: none;  /* Disable selection/copy of elements when tapping for a long time */
+  -webkit-touch-callout: none; /* Disable touch callouts */
+}
+
+input {
+  -webkit-user-select: text;  /* Allow selection for input elements */
+}
+
+.content-padded {
+  padding: 10px;
+}
+
+h1 {color:#FFFFFF;}
+
+.clktx{
+ font-size: 48px;
+ font-family: Verdana;
+ text-align: center;
+ color: white;
+ opacity: 0.9;
+ padding-top:50px;
+ padding-bottom:50px;
+}
+
+.mclk{
+ font-size: 48px;
+ font-family: Verdana;
+ text-align: center;
+ color: white;
+ opacity: 0.9;
+ padding-top:175px;
+}
+
+.mday{
+ font-size: 20px;
+ font-family: Verdana;
+ text-align: center;
+ color: white;
+ opacity: 0.9;
+ padding-bottom:225px;
+}
