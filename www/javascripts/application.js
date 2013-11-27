@@ -1,7 +1,9 @@
 //steroids.view.navigationBar.show("myClock");
-    
-    var militaryTime = false;
 
+//A boolean for 24-hour clock
+var militaryTime = false;
+
+//Return a string representing the day of the week based on the given number
 function dayString(num){
     var rVal = "";
     switch(num){
@@ -33,6 +35,8 @@ function dayString(num){
     return rVal;
 }
 
+
+//Return a string representing the day of the week based on the given number
 function monthString(num){
     var rVal = "";
     switch(num){
@@ -79,7 +83,11 @@ function monthString(num){
     return rVal;
 }
 
+
+//A function used to update the time, based on the w3cschools example:
+//http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
 function updateTime(){
+    //Create a new date and get values from it
     var today=new Date();
     var h=today.getHours();
     var m=today.getMinutes();
@@ -89,7 +97,8 @@ function updateTime(){
     var day=today.getDate();
     var dayName=dayString(today.getDay());
     var monthName=monthString(today.getMonth());
-    
+
+    //Create a date string
     var dateString = dayName + ", " + monthName + " " + day;
     
 	//Have an alarm variable
@@ -112,26 +121,29 @@ function updateTime(){
 		h-=12;
 	}
 	
+    //Make sure the 'm' and 's' have
 	m=checkTime(m);
     s=checkTime(s);
     
     
 	var timeString = h+":"+m+":"+s;
     
-    
+    //Set the timestring
 	if(!militaryTime){
 		timeString = timeString + suffix;
 	}
     
+    //Set the node values of "clock" and "day"
 	document.getElementById("clock").firstChild.nodeValue = timeString;
     document.getElementById("day").firstChild.nodeValue = dateString;
     
+    //Run this again in 500ms
 	t=setTimeout(function(){updateTime()},500);
     
     
 }
 
-
+//Toggle the 24-hour clock/12-hour clock
 function toggleMilitary(){
     militaryTime = !militaryTime;
     
@@ -143,7 +155,7 @@ function toggleMilitary(){
     }
 }
 
-
+//Set the "alarm" element's string based on the parameters
 function setAlarm(setH, setM, setAP){
     var alarmString = setH + ":" + setM + " " + setAP;
     
@@ -151,14 +163,7 @@ function setAlarm(setH, setM, setAP){
     
 }
 
-function getHour(){
-    return aHour;
-}
-
-function getMinute(){
-    return aMinute;
-}
-
+//Get the values of the "select" elements and set the alarm based on that.
 function getDropValues(){
     var dropH = document.getElementById("hours").value;
     var dropM = document.getElementById("minutes").value;
@@ -167,6 +172,7 @@ function getDropValues(){
     setAlarm(dropH, dropM, dropAP);
 }
 
+//If a number is less than 10, prepend a "0" to the beginning to make it a 2-digit number
 function checkTime(i){
     if (i<10){
         i="0" + i;

@@ -16,9 +16,13 @@
 
   <script src="javascripts/application.js"></script>
   <script>
+      //This is the stopwatch example from:
+      //http://jsfiddle.net/B1KMusic/gbPGb/
+      
       var started = false;
       var time = [[0],[0,0],[0,0],[0,0]];
       
+      //Create a sto
       function stopWatch(){
           var h, m, s, ms, timeString;
           h = time[0];
@@ -26,6 +30,8 @@
           s = time[2];
           ms = time[3];
           
+          //Increment milliseconds, and determine the values for hours, minutes,
+          //seconds, and milliseconds
           if(started){
               ms[1]++;
               if(ms[1]>9){ms[1]=0;ms[0]++;}
@@ -37,19 +43,24 @@
               if(h[0]>23){ms=[0,0];s=[0,0];m=[0,0];h[0]=0;}
           }
           
+          //Put the time string together
           var timeString = h[0]+':'+m[0]+m[1]+':'+s[0]+s[1]+'.'+ms[0]+ms[1];
           
+          //Replace the stopClock's node value with the time string
           document.getElementById("stopclock").firstChild.nodeValue = timeString;
       }
-      
+  
+      //Start the stopwatch when called
       function startSW(){
           started = true;
       }
   
+      //Stop the stopwatch when called
       function stopSW(){
          started = false;
       }
   
+      //Zero out the values of the time string when called.
       function resetSW(){
          time = [[0],[0,0],[0,0],[0,0]];
       }
@@ -58,10 +69,12 @@
 </head>
 <body onload="stopWatch(); setInterval('stopWatch()', 1)">
 	<div class="content-padded">
+        <!-- Display the time in hours, minutes, seconds, and ms -->
         <div class="clktx">
             <span id="stopclock">&nbsp;</span></div>
         <hr>
 
+        <!-- The buttons for the stopwatch functions -->
 		<a class="topcoat-button center half" ontouchend="startSW()">Start</a>
         <a class="topcoat-button center half" ontouchend="stopSW()">Stop</a>
 		<br><br>

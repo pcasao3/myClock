@@ -20,8 +20,10 @@
 <body>
 	<div class="content-padded">
 		<div class="clktx">
+        <!-- Display the alarm string -->
         <span id="alarm">No Alarm Set&nbsp;</span></div>
         <hr>
+        <!-- Create select objects with values to set the alarm -->
 <form class="center">
 <select id="hours">
 <option value="1">&nbsp;01&nbsp;</option>
@@ -108,6 +110,7 @@
 </form>
 <br><br>
 
+        <!-- Retrieve the values from the select objects and set the alarm -->
 		<a class="topcoat-button center full" ontouchend="getDropValues()">Set</a>
 		<br><br>
 	</div>
