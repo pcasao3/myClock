@@ -30,17 +30,13 @@
 
 </head>
    <!-- Call updateTime() after loading the body, and update it every 1000ms-->
-   <body onload="updateTime(); setInterval('updateTime()', 1000)">
+   <body>
        <div class="content-padded">
-           <!-- Display the time in hours, minutes, and seconds -->
-           <div class="mclk">
-	<span id="clock">&nbsp;</span><br></div>
-           <!-- Display the day in MMDDYYYY -->
-           <div class="mday">
-           <span id="day">&nbsp;</span></div>
     <br>
-         <!-- This button toggles the 12hour/24hour clock -->
-         <div class="topcoat-button center full" id="toggle24" ontouchend="toggleMilitary()">Switch to 24-Hour Clock</div>
+         <!-- These buttons show the corresponding modals -->
+         <div class="topcoat-button center full" id="cbtn" ontouchend="showClock()">Clock</div>
+         <div class="topcoat-button center full" id="abtn" ontouchend="showAlarm()">Alarm</div>
+         <div class="topcoat-button center full" id="sabtn" ontouchend="showStopwatch()">Stopwatch</div>
 	<br><br>
    </body>
 </html>

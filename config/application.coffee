@@ -7,31 +7,31 @@ steroids.config.name = "myClock"
 steroids.config.location = "index.html"
 
 # -- Tab Bar --
-steroids.config.tabBar.enabled = true
-steroids.config.tabBar.tabs = [
-   {
-      title: "Clock"
-      icon: "icons/pill@2x.png"
-      location: "http://localhost/index.html"
-   },
-   {
-      title: "Alarm"
-      icon: "icons/telescope@2x.png"
-      location: "http://localhost/alarm.html"
-   }
-   {
-      title: "Stopwatch"
-      icon: "icons/telescope@2x.png"
-      location: "http://localhost/stopwatch.html"
-   }
-]
+#steroids.config.tabBar.enabled = true
+#steroids.config.tabBar.tabs = [
+#   {
+#      title: "Clock"
+#      icon: "icons/pill@2x.png"
+#      location: "http://localhost/index.html"
+#   },
+#   {
+#      title: "Alarm"
+#      icon: "icons/telescope@2x.png"
+#      location: "http://localhost/alarm.html"
+#   }
+#   {
+#      title: "Stopwatch"
+#      icon: "icons/telescope@2x.png"
+#      location: "http://localhost/stopwatch.html"
+#   }
+#]
 
-steroids.config.tabBar.tintColor = "#000000"
-steroids.config.tabBar.tabTitleColor = "#00aeef"
-steroids.config.tabBar.selectedTabTintColor = "#ffffff"
-steroids.config.tabBar.selectedTabBackgroundImage = "icons/pill@2x.png"
+#steroids.config.tabBar.tintColor = "#000000"
+#steroids.config.tabBar.tabTitleColor = "#00aeef"
+#steroids.config.tabBar.selectedTabTintColor = "#ffffff"
+#steroids.config.tabBar.selectedTabBackgroundImage = "icons/pill@2x.png"
 
-steroids.config.tabBar.backgroundImage = ""
+#steroids.config.tabBar.backgroundImage = ""
 
 # -- Navigation Bar --
 steroids.config.navigationBar.tintColor = "#00aeef"

@@ -1,5 +1,24 @@
 //steroids.view.navigationBar.show("myClock");
 
+//Show Clock
+function showClock(){
+    var webView = new steroids.views.WebView("clock.html");
+    steroids.modal.show(webView);
+}
+
+
+//Show Alarm
+function showAlarm(){
+    var webView = new steroids.views.WebView("alarm.html");
+    steroids.modal.show(webView);
+}
+
+//Show Stopwatch
+function showStopwatch(){
+    var webView = new steroids.views.WebView("stopwatch.html");
+    steroids.modal.show(webView);
+}
+
 //A boolean for 24-hour clock
 var militaryTime = false;
 
