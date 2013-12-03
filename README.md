@@ -1,9 +1,11 @@
 # Steroids Clock Example App
 
 This app is a sample Clock app made using code from:
+
 HTML5 Clock:
 http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
  
+
 HTML5 Stopwatch:
 http://jsfiddle.net/B1KMusic/gbPGb/
 
