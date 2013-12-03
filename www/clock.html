@@ -1,0 +1,49 @@
+<!--
+ This Appgyver App uses javascript from several sources.
+ HTML5 Clock:
+    http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+ 
+ HTML5 Stopwatch:
+    http://jsfiddle.net/B1KMusic/gbPGb/
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width">
+  <title>myClock</title>
+
+  <link rel="stylesheet" href="vendor/topcoat/css/topcoat-mobile-dark.css" />
+  <link rel="stylesheet" href="stylesheets/application.css" />
+
+  <script src="javascripts/onerror.js"></script>
+  <script src="javascripts/console.log.js"></script>
+
+  <!-- cordova.js is served from localhost to ensure the correct version -->
+  <script src="http://localhost/appgyver/cordova.js"></script>
+  <script src="components/steroids-js/steroids.js"></script>
+
+  <script src="javascripts/application.js"></script>
+
+
+</head>
+   <!-- Call updateTime() after loading the body, and update it every 1000ms-->
+   <body onload="updateTime(); setInterval('updateTime()', 1000)">
+       <div class="content-padded">
+           <!-- Display the time in hours, minutes, and seconds -->
+           <div class="mclk">
+	<span id="clock">&nbsp;</span><br></div>
+           <!-- Display the day in MMDDYYYY -->
+           <div class="mday">
+           <span id="day">&nbsp;</span></div>
+    <br>
+         <!-- This button toggles the 12hour/24hour clock -->
+         <div class="topcoat-button center full" id="toggle24" ontouchend="toggleMilitary()">Switch to 24-Hour Clock</div>
+         
+         <!-- This button hides the modal -->
+         <div class="topcoat-button center full" id="bbtn" ontouchend="steroids.modal.hide()">Back</div>
+	<br><br>
+   </body>
+</html>
